@@ -1,0 +1,47 @@
+
+spring:
+  datasource:
+    url: ${DB_URL}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        physical_naming_strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_SERVER}
+    password:  ${MAIL_PASSWORD}
+    protocol: smtp
+    isSSL: false
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+jwt:
+  expiration: ${JWT_EXPIRATION}
+  secretKey: ${JWT_SECRETKEY}
+twilio:
+  accountSid: ${TWL_ACCOUNT}
+  authToken: ${TWL_TOKEN}
+  serviceSid: ${TWL_SERVICE}
+
+vnpay:
+  tmnCode: ${VNP_TMNCODE}
+  hashSecret: ${VNP_HASHSECRET}
+  returnUrl: ${VNP_RETURNURL}
+  payUrl: ${VNP_PAYURL}
+  bankCode: ${VNP_BANKCODE}
+  version: ${VNP_VERSION}
+  command: ${VNP_COMMAND}
+  orderType: ${VNP_ORDERTYPE}
+  client: ${VNP_CLIENT}
