@@ -38,13 +38,13 @@ twilio:
 vnpay:
   tmnCode: ${VNP_TMNCODE}
   hashSecret: ${VNP_HASHSECRET}
-  returnUrl: ${VNP_RETURNURL}
+  returnUrl: ${VNP_RETURNURL_PRO}
   payUrl: ${VNP_PAYURL}
   bankCode: ${VNP_BANKCODE}
   version: ${VNP_VERSION}
   command: ${VNP_COMMAND}
   orderType: ${VNP_ORDERTYPE}
-  client: ${VNP_CLIENT}
+  client: ${VNP_CLIENT_PRO}
 app:
   cors:
     allowed-origins: ${LIST_DOMAINS}
