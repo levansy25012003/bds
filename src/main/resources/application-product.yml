@@ -45,3 +45,6 @@ vnpay:
   command: ${VNP_COMMAND}
   orderType: ${VNP_ORDERTYPE}
   client: ${VNP_CLIENT}
+app:
+  cors:
+    allowed-origins: ${LIST_DOMAINS}

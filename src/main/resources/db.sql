@@ -245,3 +245,4 @@ select * from THANHTOAN;
 select * from batdongsan where tinh = "Thành Phố Đà Nẵng";
 
 select * from batdongsan;
+select * from taikhoan;
