@@ -10,6 +10,7 @@ import com.example.bds.dto.req.LoginGoogleDTO;
 import com.example.bds.dto.req.LoginPhoneDTO;
 import com.example.bds.dto.req.ResetPasswordDTO;
 import com.example.bds.exception.DataNotFoundException;
+import com.example.bds.model.GoiDichVu;
 import com.example.bds.model.TaiKhoan;
 import com.example.bds.repository.TaiKhoanRepository;
 import com.example.bds.service.IAuthService;
@@ -56,10 +57,13 @@ public class AuthService implements IAuthService {
 
             // Tạo mới tài khoản
             taiKhoan = new TaiKhoan();
+           // GoiDichVu goiDichVu = new GoiDichVu();
+
             taiKhoan.setEmail(req.getEmail());
             taiKhoan.setHoVaTen(req.getFullname());
             taiKhoan.setAnhDaiDien(req.getAvatar());
             taiKhoan.setEmailXacThuc(true);
+           // taiKhoan.setMaGiaHienTai();
 
             taiKhoan.setMatKhau(passwordEncoder.encode(req.getPassword()));
 

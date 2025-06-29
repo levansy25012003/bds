@@ -88,6 +88,7 @@ public class BatDongSanService implements IBatDongSanService {
           }
           bds.setXacThuc(false);
           bds.setLuotXem(0);
+          bds.setCreatedAt(new Timestamp(System.currentTimeMillis()));
           // Thiết lập liên kết tài khoản và gói dịch vụ
           taiKhoanRepository.findById(id).ifPresent(bds::setTaiKhoan);
           if (req.getIdPricing() != null) {
