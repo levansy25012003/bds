@@ -57,13 +57,14 @@ public class AuthService implements IAuthService {
 
             // Tạo mới tài khoản
             taiKhoan = new TaiKhoan();
-           // GoiDichVu goiDichVu = new GoiDichVu();
+            GoiDichVu goiDichVu = new GoiDichVu();
+            goiDichVu.setId(1);
 
             taiKhoan.setEmail(req.getEmail());
             taiKhoan.setHoVaTen(req.getFullname());
             taiKhoan.setAnhDaiDien(req.getAvatar());
             taiKhoan.setEmailXacThuc(true);
-           // taiKhoan.setMaGiaHienTai();
+           taiKhoan.setMaGiaHienTai(goiDichVu);
 
             taiKhoan.setMatKhau(passwordEncoder.encode(req.getPassword()));
 
