@@ -50,6 +50,7 @@ public class VNPAYConfig {
         vnpParamsMap.put("vnp_BankCode", this.vnp_BankCode);
         Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("Asia/Ho_Chi_Minh"));
         SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+        formatter.setTimeZone(TimeZone.getTimeZone("Asia/Ho_Chi_Minh"));
         String vnpCreateDate = formatter.format(calendar.getTime());
         vnpParamsMap.put("vnp_CreateDate", vnpCreateDate);
         calendar.add(Calendar.MINUTE, 15);
